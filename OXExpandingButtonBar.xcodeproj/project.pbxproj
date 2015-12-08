@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD7906411C16B72E00436632 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7906401C16B72E00436632 /* main.m */; };
+		AD7906441C16B72E00436632 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7906431C16B72E00436632 /* AppDelegate.m */; };
+		AD7906471C16B72E00436632 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7906461C16B72E00436632 /* ViewController.m */; };
+		AD79064A1C16B72E00436632 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7906481C16B72E00436632 /* Main.storyboard */; };
+		AD79064C1C16B72E00436632 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD79064B1C16B72E00436632 /* Images.xcassets */; };
+		AD79064F1C16B72E00436632 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD79064D1C16B72E00436632 /* LaunchScreen.xib */; };
+		AD79065B1C16B72E00436632 /* OXExpandingButtonBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD79065A1C16B72E00436632 /* OXExpandingButtonBarTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD7906551C16B72E00436632 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD7906331C16B72E00436632 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD79063A1C16B72E00436632;
+			remoteInfo = OXExpandingButtonBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AD79063B1C16B72E00436632 /* OXExpandingButtonBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OXExpandingButtonBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD79063F1C16B72E00436632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD7906401C16B72E00436632 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AD7906421C16B72E00436632 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AD7906431C16B72E00436632 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AD7906451C16B72E00436632 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AD7906461C16B72E00436632 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AD7906491C16B72E00436632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD79064B1C16B72E00436632 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AD79064E1C16B72E00436632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AD7906541C16B72E00436632 /* OXExpandingButtonBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OXExpandingButtonBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD7906591C16B72E00436632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD79065A1C16B72E00436632 /* OXExpandingButtonBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OXExpandingButtonBarTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD7906381C16B72E00436632 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD7906511C16B72E00436632 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD7906321C16B72E00436632 = {
+			isa = PBXGroup;
+			children = (
+				AD79063D1C16B72E00436632 /* OXExpandingButtonBar */,
+				AD7906571C16B72E00436632 /* OXExpandingButtonBarTests */,
+				AD79063C1C16B72E00436632 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD79063C1C16B72E00436632 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD79063B1C16B72E00436632 /* OXExpandingButtonBar.app */,
+				AD7906541C16B72E00436632 /* OXExpandingButtonBarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD79063D1C16B72E00436632 /* OXExpandingButtonBar */ = {
+			isa = PBXGroup;
+			children = (
+				AD7906421C16B72E00436632 /* AppDelegate.h */,
+				AD7906431C16B72E00436632 /* AppDelegate.m */,
+				AD7906451C16B72E00436632 /* ViewController.h */,
+				AD7906461C16B72E00436632 /* ViewController.m */,
+				AD7906481C16B72E00436632 /* Main.storyboard */,
+				AD79064B1C16B72E00436632 /* Images.xcassets */,
+				AD79064D1C16B72E00436632 /* LaunchScreen.xib */,
+				AD79063E1C16B72E00436632 /* Supporting Files */,
+			);
+			path = OXExpandingButtonBar;
+			sourceTree = "<group>";
+		};
+		AD79063E1C16B72E00436632 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD79063F1C16B72E00436632 /* Info.plist */,
+				AD7906401C16B72E00436632 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD7906571C16B72E00436632 /* OXExpandingButtonBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD79065A1C16B72E00436632 /* OXExpandingButtonBarTests.m */,
+				AD7906581C16B72E00436632 /* Supporting Files */,
+			);
+			path = OXExpandingButtonBarTests;
+			sourceTree = "<group>";
+		};
+		AD7906581C16B72E00436632 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD7906591C16B72E00436632 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD79063A1C16B72E00436632 /* OXExpandingButtonBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD79065E1C16B72E00436632 /* Build configuration list for PBXNativeTarget "OXExpandingButtonBar" */;
+			buildPhases = (
+				AD7906371C16B72E00436632 /* Sources */,
+				AD7906381C16B72E00436632 /* Frameworks */,
+				AD7906391C16B72E00436632 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OXExpandingButtonBar;
+			productName = OXExpandingButtonBar;
+			productReference = AD79063B1C16B72E00436632 /* OXExpandingButtonBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AD7906531C16B72E00436632 /* OXExpandingButtonBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD7906611C16B72E00436632 /* Build configuration list for PBXNativeTarget "OXExpandingButtonBarTests" */;
+			buildPhases = (
+				AD7906501C16B72E00436632 /* Sources */,
+				AD7906511C16B72E00436632 /* Frameworks */,
+				AD7906521C16B72E00436632 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD7906561C16B72E00436632 /* PBXTargetDependency */,
+			);
+			name = OXExpandingButtonBarTests;
+			productName = OXExpandingButtonBarTests;
+			productReference = AD7906541C16B72E00436632 /* OXExpandingButtonBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD7906331C16B72E00436632 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = csdc;
+				TargetAttributes = {
+					AD79063A1C16B72E00436632 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					AD7906531C16B72E00436632 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = AD79063A1C16B72E00436632;
+					};
+				};
+			};
+			buildConfigurationList = AD7906361C16B72E00436632 /* Build configuration list for PBXProject "OXExpandingButtonBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD7906321C16B72E00436632;
+			productRefGroup = AD79063C1C16B72E00436632 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD79063A1C16B72E00436632 /* OXExpandingButtonBar */,
+				AD7906531C16B72E00436632 /* OXExpandingButtonBarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD7906391C16B72E00436632 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD79064A1C16B72E00436632 /* Main.storyboard in Resources */,
+				AD79064F1C16B72E00436632 /* LaunchScreen.xib in Resources */,
+				AD79064C1C16B72E00436632 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD7906521C16B72E00436632 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD7906371C16B72E00436632 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD7906471C16B72E00436632 /* ViewController.m in Sources */,
+				AD7906441C16B72E00436632 /* AppDelegate.m in Sources */,
+				AD7906411C16B72E00436632 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD7906501C16B72E00436632 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD79065B1C16B72E00436632 /* OXExpandingButtonBarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD7906561C16B72E00436632 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD79063A1C16B72E00436632 /* OXExpandingButtonBar */;
+			targetProxy = AD7906551C16B72E00436632 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AD7906481C16B72E00436632 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD7906491C16B72E00436632 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AD79064D1C16B72E00436632 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD79064E1C16B72E00436632 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD79065C1C16B72E00436632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AD79065D1C16B72E00436632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD79065F1C16B72E00436632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OXExpandingButtonBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AD7906601C16B72E00436632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OXExpandingButtonBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AD7906621C16B72E00436632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OXExpandingButtonBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OXExpandingButtonBar.app/OXExpandingButtonBar";
+			};
+			name = Debug;
+		};
+		AD7906631C16B72E00436632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OXExpandingButtonBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OXExpandingButtonBar.app/OXExpandingButtonBar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD7906361C16B72E00436632 /* Build configuration list for PBXProject "OXExpandingButtonBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD79065C1C16B72E00436632 /* Debug */,
+				AD79065D1C16B72E00436632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD79065E1C16B72E00436632 /* Build configuration list for PBXNativeTarget "OXExpandingButtonBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD79065F1C16B72E00436632 /* Debug */,
+				AD7906601C16B72E00436632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AD7906611C16B72E00436632 /* Build configuration list for PBXNativeTarget "OXExpandingButtonBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD7906621C16B72E00436632 /* Debug */,
+				AD7906631C16B72E00436632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD7906331C16B72E00436632 /* Project object */;
+}
