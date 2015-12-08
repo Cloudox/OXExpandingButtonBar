@@ -12,6 +12,8 @@
 
 - (id) initWithMainButton:(UIButton*)mainButton buttons:(NSArray*)buttons center:(CGPoint)center {
     if (self = [super init]) {
+        [self setDefaults];// 设置默认数值
+        
         CGRect buttonFrame = CGRectMake(0, 0, mainButton.frame.size.width, mainButton.frame.size.height);
         CGPoint buttonCenter = CGPointMake(mainButton.frame.size.width / 2.0f, mainButton.frame.size.height / 2.0f);
         
@@ -39,6 +41,19 @@
     return self;
 }
 
+// 设置默认数值
+- (void)setDefaults {
+    /*关于M_PI
+     #define M_PI     3.14159265358979323846264338327950288
+     其实它就是圆周率的值，在这里代表弧度，相当于角度制 0-360 度，M_PI=180度
+     旋转方向为：顺时针旋转
+     */
+    
+    _mainRotate = 0.0f;
+    _mainReRotate = - M_PI*(45)/180.0;
+    _isSpin = YES;
+}
+
 // 点击主按钮的响应
 - (void)btnTap:(UIButton *)sender {
     if (!self.isExpanding) {// 初始未展开
@@ -48,16 +63,10 @@
     }
 }
 
-/*关于M_PI
- #define M_PI     3.14159265358979323846264338327950288
- 其实它就是圆周率的值，在这里代表弧度，相当于角度制 0-360 度，M_PI=180度
- 旋转方向为：顺时针旋转
- */
-
 // 展开按钮
 - (void)showButtonsAnimated {
     // 主按钮旋转动画
-    CGAffineTransform angle = CGAffineTransformMakeRotation (0);
+    CGAffineTransform angle = CGAffineTransformMakeRotation (_mainRotate);
     [UIView animateWithDuration:0.3 animations:^{// 动画开始
         [self.mainBtn setTransform:angle];
     } completion:^(BOOL finished){// 动画结束
@@ -82,12 +91,13 @@
         // 动画集合
         NSMutableArray *animationOptions = [NSMutableArray array];
         
-        // 旋转动画
-        CAKeyframeAnimation *rotateAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
-        [rotateAnimation setValues:[NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0f],[NSNumber numberWithFloat:M_PI * 2], nil]];
-        [rotateAnimation setDuration:0.4f];
-        [rotateAnimation setKeyTimes:[NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0f], [NSNumber numberWithFloat:1.0f], nil]];
-        [animationOptions addObject:rotateAnimation];
+        if (_isSpin) {// 旋转动画
+            CAKeyframeAnimation *rotateAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
+            [rotateAnimation setValues:[NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0f],[NSNumber numberWithFloat:M_PI * 2], nil]];
+            [rotateAnimation setDuration:0.4f];
+            [rotateAnimation setKeyTimes:[NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0f], [NSNumber numberWithFloat:1.0f], nil]];
+            [animationOptions addObject:rotateAnimation];
+        }
         
         // 位置动画
         CAKeyframeAnimation *positionAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
@@ -117,7 +127,7 @@
 // 收起动画
 - (void) hideButtonsAnimated {
     // 主按钮旋转动画
-    CGAffineTransform unangle = CGAffineTransformMakeRotation (- M_PI*(45)/180.0);
+    CGAffineTransform unangle = CGAffineTransformMakeRotation (_mainReRotate);
     [UIView animateWithDuration:0.3 animations:^{// 动画开始
         [self.mainBtn setTransform:unangle];
     } completion:^(BOOL finished){// 动画结束
@@ -133,12 +143,13 @@
         // 动画集合
         NSMutableArray *animationOptions = [NSMutableArray array];
         
-        // 旋转动画
-        CAKeyframeAnimation *rotateAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
-        [rotateAnimation setValues:[NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0f],[NSNumber numberWithFloat:M_PI * -2], nil]];
-        [rotateAnimation setDuration:0.4f];
-        [rotateAnimation setKeyTimes:[NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0f], [NSNumber numberWithFloat:1.0f], nil]];
-        [animationOptions addObject:rotateAnimation];
+        if (_isSpin) {// 旋转动画
+            CAKeyframeAnimation *rotateAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
+            [rotateAnimation setValues:[NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0f],[NSNumber numberWithFloat:M_PI * -2], nil]];
+            [rotateAnimation setDuration:0.4f];
+            [rotateAnimation setKeyTimes:[NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0f], [NSNumber numberWithFloat:1.0f], nil]];
+            [animationOptions addObject:rotateAnimation];
+        }
         
         // 透明度？
         CAKeyframeAnimation *opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
@@ -173,7 +184,6 @@
 // 弹出
 - (void) _expand:(NSDictionary*)properties
 {
-    NSLog(@"expand");
     UIView *view = [properties objectForKey:@"view"];
     CAAnimationGroup *animationGroup = [properties objectForKey:@"animation"];
     NSValue *val = [properties objectForKey:@"center"];
@@ -193,6 +203,23 @@
     [view setAlpha:0.0f];
     [view setCenter:center];
 }
+
+
+/* ----------------------------------------------
+ * 以下方法为设置时用到的方法
+ * --------------------------------------------*/
+- (void)setMainRotate:(float)rotate {
+    _mainRotate = rotate;
+}
+
+- (void)setMainReRotate:(float)rotate {
+    _mainReRotate = rotate;
+}
+
+- (void)setSpin:(BOOL)b {
+    _isSpin = b;
+}
+
 
 /* ----------------------------------------------
  * DO NOT CHANGE
