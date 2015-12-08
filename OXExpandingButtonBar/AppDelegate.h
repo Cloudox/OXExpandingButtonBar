@@ -2,8 +2,8 @@
 //  AppDelegate.h
 //  OXExpandingButtonBar
 //
-//  Created by csdc-iMac on 15/12/8.
-//  Copyright (c) 2015年 csdc. All rights reserved.
+//  Created by Cloudox on 15/12/8.
+//  Copyright (c) 2015年 Cloudox. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
