@@ -20,6 +20,7 @@
 		AD79066F1C16BEA400436632 /* sumitmood.png in Resources */ = {isa = PBXBuildFile; fileRef = AD79066C1C16BEA400436632 /* sumitmood.png */; };
 		AD7906721C16CF8500436632 /* ExpandingButtonExpanded.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD7906701C16CF8400436632 /* ExpandingButtonExpanded.jpg */; };
 		AD7906731C16CF8500436632 /* ExpandingButtonNot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AD7906711C16CF8400436632 /* ExpandingButtonNot.jpg */; };
+		AD7906791C16D00200436632 /* OXExpandingButtonBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7906781C16D00200436632 /* OXExpandingButtonBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		AD79066C1C16BEA400436632 /* sumitmood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sumitmood.png; sourceTree = "<group>"; };
 		AD7906701C16CF8400436632 /* ExpandingButtonExpanded.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ExpandingButtonExpanded.jpg; sourceTree = "<group>"; };
 		AD7906711C16CF8400436632 /* ExpandingButtonNot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ExpandingButtonNot.jpg; sourceTree = "<group>"; };
+		AD7906771C16D00200436632 /* OXExpandingButtonBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXExpandingButtonBar.h; sourceTree = "<group>"; };
+		AD7906781C16D00200436632 /* OXExpandingButtonBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OXExpandingButtonBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				AD79063C1C16B72E00436632 /* Products */,
 				AD7906701C16CF8400436632 /* ExpandingButtonExpanded.jpg */,
 				AD7906711C16CF8400436632 /* ExpandingButtonNot.jpg */,
+				AD7906771C16D00200436632 /* OXExpandingButtonBar.h */,
+				AD7906781C16D00200436632 /* OXExpandingButtonBar.m */,
 			);
 			sourceTree = "<group>";
 		};
@@ -246,6 +251,7 @@
 			files = (
 				AD7906471C16B72E00436632 /* ViewController.m in Sources */,
 				AD7906441C16B72E00436632 /* AppDelegate.m in Sources */,
+				AD7906791C16D00200436632 /* OXExpandingButtonBar.m in Sources */,
 				AD7906411C16B72E00436632 /* main.m in Sources */,
 				AD7906691C16B7B900436632 /* OXExpandingButtonBar.m in Sources */,
 			);
