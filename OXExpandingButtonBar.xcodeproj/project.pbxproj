@@ -442,6 +442,7 @@
 				AD7906601C16B72E00436632 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD7906611C16B72E00436632 /* Build configuration list for PBXNativeTarget "OXExpandingButtonBarTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +451,7 @@
 				AD7906631C16B72E00436632 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
