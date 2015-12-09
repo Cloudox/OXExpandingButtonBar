@@ -23,6 +23,7 @@
         self.mainBtn = mainButton;
         [self.mainBtn addTarget:self action:@selector(btnTap:) forControlEvents:UIControlEventTouchUpInside];
         [self.mainBtn setCenter:buttonCenter];
+        _mainAlpha = self.mainBtn.alpha;
         
         // 子按钮
         self.buttonArray = [[buttons reverseObjectEnumerator] allObjects];
@@ -55,7 +56,6 @@
     _endY = 30.0f;
     _farY = 30.0f;
     _nearY = 15.0f;
-    _mainAlpha = 0.5f;
 }
 
 // 点击主按钮的响应
