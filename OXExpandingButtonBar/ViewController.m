@@ -26,6 +26,7 @@
     [mainBtn setFrame:buttonFrame];
     [mainBtn setBackgroundImage:[UIImage imageNamed:@"btn_quickoption_route"] forState:UIControlStateNormal];
     mainBtn.transform = CGAffineTransformMakeRotation(- M_PI*(45)/180.0);
+    mainBtn.alpha = 0.5;
     
     // 子按钮
     UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -46,6 +47,7 @@
 //    [self.bar setEndY:30.0f];// 设置子按钮最终位置之间的高度距离
 //    [self.bar setFarY:30.0f];// 设置子按钮弹出动画弹到的最远高度距离
 //    [self.bar setNearY:15.0f];// 设置子按钮弹出动画反弹时的最近高度距离
+//    [self.bar setMainAlpha:0.5f];// 设置主按钮未展开时的alpha值
     [self.view addSubview:self.bar];
 }
 

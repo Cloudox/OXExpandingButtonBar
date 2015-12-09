@@ -19,6 +19,7 @@
     float _endY;// 子按钮最终位置之间的高度距离
     float _farY;// 子按钮弹出动画弹到的最远高度距离
     float _nearY;// 子按钮弹出动画反弹时的最近高度距离
+    float _mainAlpha;// 主按钮未展开时的alpha值
 }
 
 /* ----------------------------------------------
@@ -79,5 +80,10 @@
  * 设置子按钮弹出动画反弹时的最近高度距离
  **/
 - (void)setNearY:(float)neary;
+
+/**
+ * 设置主按钮未展开时的alpha值
+ **/
+- (void)setMainAlpha:(float)alpha;
 
 @end

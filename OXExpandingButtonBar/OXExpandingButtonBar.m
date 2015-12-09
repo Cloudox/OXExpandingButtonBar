@@ -55,6 +55,7 @@
     _endY = 30.0f;
     _farY = 30.0f;
     _nearY = 15.0f;
+    _mainAlpha = 0.5f;
 }
 
 // 点击主按钮的响应
@@ -125,6 +126,7 @@
         [self performSelector:@selector(_expand:) withObject:properties afterDelay:0.1f * ([self.buttonArray count] - i)];
     }
     self.isExpanding = YES;// 设为已展开
+    [self performSelector:@selector(changeMainAlpha) withObject:nil afterDelay:0.1f * [self.buttonArray count]];
 }
 
 // 收起动画
@@ -182,6 +184,7 @@
         [self performSelector:@selector(_close:) withObject:properties afterDelay:0.1f * ([self.buttonArray count] - i)];
     }
     self.isExpanding = NO;// 设为未展开
+    [self performSelector:@selector(changeMainAlpha) withObject:nil afterDelay:0.1f * [self.buttonArray count]];
 }
 
 // 弹出
@@ -205,6 +208,15 @@
     [[view layer] addAnimation:animationGroup forKey:@"Collapse"];
     [view setAlpha:0.0f];
     [view setCenter:center];
+}
+
+// 改变主按钮alpha
+- (void) changeMainAlpha {
+    if (self.isExpanding) {// 已展开
+        self.mainBtn.alpha = 1.0f;
+    } else {
+        self.mainBtn.alpha = _mainAlpha;
+    }
 }
 
 
@@ -233,6 +245,10 @@
 
 - (void)setNearY:(float)neary {
     _nearY = neary;
+}
+
+- (void)setMainAlpha:(float)alpha {
+    _mainAlpha = alpha;
 }
 
 
