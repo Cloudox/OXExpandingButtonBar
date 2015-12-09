@@ -68,3 +68,9 @@ OXExpandingButtonBar是一个弹出按钮的控件。首先有一个主按钮，
 - (void)setNearY:(float)neary;
 ```
 设置子按钮弹出动画反弹时的最近高度距离
+
+```objective-c
+- (void)setMainAlpha:(float)alpha;
+```
+设置主按钮未展开时的alpha值  
+`注意：`在创建主按钮时，需要自行设置初始的alpha值，与此处设置的一般一致
