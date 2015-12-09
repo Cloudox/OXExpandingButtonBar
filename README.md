@@ -44,14 +44,27 @@ OXExpandingButtonBar是一个弹出按钮的控件。首先有一个主按钮，
 ```
 设置展开时主按钮旋转到的角度。
 
-
 ```objective-c
 - (void)setMainReRotate:(float)rotate;
 ```
 设置收起时主按钮旋转到的角度。
 
-
 ```objective-c
 - (void)setSpin:(BOOL)b;
 ```
 设置弹出子按钮时是否旋转子按钮。
+
+```objective-c
+- (void)setEndY:(float)endy;
+```
+设置子按钮最终位置之间的高度距离
+
+```objective-c
+- (void)setFarY:(float)fary;
+```
+设置子按钮弹出动画弹到的最远高度距离
+
+```objective-c
+- (void)setNearY:(float)neary;
+```
+设置子按钮弹出动画反弹时的最近高度距离
