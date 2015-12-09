@@ -52,6 +52,9 @@
     _mainRotate = 0.0f;
     _mainReRotate = - M_PI*(45)/180.0;
     _isSpin = YES;
+    _endY = 30.0f;
+    _farY = 30.0f;
+    _nearY = 15.0f;
 }
 
 // 点击主按钮的响应
@@ -80,12 +83,12 @@
     for (int i = 0; i < [self.buttonArray count]; ++i) {
         UIButton *button = [self.buttonArray objectAtIndex:i];
         // 最终坐标
-        endY -= button.frame.size.height + 30.0f;
+        endY -= button.frame.size.height + _endY;
         endX += 0.0f;
         // 反弹坐标
-        float farY = endY - 30.0f;
+        float farY = endY - _farY;
         float farX = endX - 0.0f;
-        float nearY = endY + 15.0f;
+        float nearY = endY + _nearY;
         float nearX = endX + 0.0f;
         
         // 动画集合
@@ -218,6 +221,18 @@
 
 - (void)setSpin:(BOOL)b {
     _isSpin = b;
+}
+
+- (void)setEndY:(float)endy {
+    _endY = endy;
+}
+
+- (void)setFarY:(float)fary {
+    _farY = fary;
+}
+
+- (void)setNearY:(float)neary {
+    _nearY = neary;
 }
 
 

@@ -43,6 +43,9 @@
 //    [self.bar setMainRotate:0.0f];// 设置展开时主按钮旋转到的角度
 //    [self.bar setMainReRotate:- M_PI*(45)/180.0];// 设置收起时主按钮旋转到的角度
 //    [self.bar setSpin:YES];// 设置弹出子按钮时是否旋转子按钮
+//    [self.bar setEndY:30.0f];// 设置子按钮最终位置之间的高度距离
+//    [self.bar setFarY:30.0f];// 设置子按钮弹出动画弹到的最远高度距离
+//    [self.bar setNearY:15.0f];// 设置子按钮弹出动画反弹时的最近高度距离
     [self.view addSubview:self.bar];
 }
 

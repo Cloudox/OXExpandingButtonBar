@@ -16,6 +16,9 @@
     float _mainRotate;// 主按钮点击展开时旋转到的角度
     float _mainReRotate;// 主按钮点击收回时旋转到的角度
     BOOL _isSpin;// 子按钮是否旋转
+    float _endY;// 子按钮最终位置之间的高度距离
+    float _farY;// 子按钮弹出动画弹到的最远高度距离
+    float _nearY;// 子按钮弹出动画反弹时的最近高度距离
 }
 
 /* ----------------------------------------------
@@ -61,5 +64,20 @@
  * 设置弹出子按钮时是否旋转子按钮
  **/
 - (void)setSpin:(BOOL)b;
+
+/**
+ * 设置子按钮最终位置之间的高度距离
+ **/
+- (void)setEndY:(float)endy;
+
+/**
+ * 设置子按钮弹出动画弹到的最远高度距离
+ **/
+- (void)setFarY:(float)fary;
+
+/**
+ * 设置子按钮弹出动画反弹时的最近高度距离
+ **/
+- (void)setNearY:(float)neary;
 
 @end
