@@ -72,5 +72,5 @@ OXExpandingButtonBar是一个弹出按钮的控件。首先有一个主按钮，
 ```objective-c
 - (void)setMainAlpha:(float)alpha;
 ```
-置主按钮未展开时的alpha值。  
+设置主按钮未展开时的alpha值  
 `注意：`在创建主按钮时，需要自行设置初始的alpha值，与此处设置的一般一致
