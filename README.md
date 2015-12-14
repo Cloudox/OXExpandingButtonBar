@@ -35,7 +35,7 @@ OXExpandingButtonBar是一个弹出按钮的控件。首先有一个主按钮，
 - (void) hideButtonsAnimated;
 ```
   
-使用此“isExpanding”属性可以判断子按钮是否已弹出。如：
+使用“isExpanding”属性可以判断子按钮是否已弹出。如：
 ```objective-c
 if (bar.isExpanding) {
     // 如果已展开
