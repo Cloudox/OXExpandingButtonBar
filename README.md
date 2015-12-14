@@ -74,3 +74,18 @@ OXExpandingButtonBar是一个弹出按钮的控件。首先有一个主按钮，
 ```
 设置主按钮未展开时的alpha值  
 `注意：`在创建主按钮时，需要自行设置初始的alpha值，与此处设置的一般一致；当你不使用此方法时，则未展开时始终与你设置的主按钮alpha值一样。
+
+```objective-c
+- (void)setMainAnimationTime:(float)time;
+```
+设置主按钮旋转动画时间
+
+```objective-c
+- (void)setSubAnimationTime:(float)time;
+```
+设置子按钮弹出和旋转动画时间
+
+```objective-c
+- (void)setDelay:(float)time;
+```
+设置子按钮之间的间隔时间；也影响主按钮延迟改变透明度的时间
