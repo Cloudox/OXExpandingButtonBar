@@ -56,6 +56,9 @@
     _endY = 30.0f;
     _farY = 30.0f;
     _nearY = 15.0f;
+    _mainAnimationTime = 0.3f;
+    _subAnimationTime = 0.4f;
+    _delay = 0.1f;
 }
 
 // 点击主按钮的响应
@@ -71,7 +74,7 @@
 - (void)showButtonsAnimated {
     // 主按钮旋转动画
     CGAffineTransform angle = CGAffineTransformMakeRotation (_mainRotate);
-    [UIView animateWithDuration:0.3 animations:^{// 动画开始
+    [UIView animateWithDuration:_mainAnimationTime animations:^{// 动画开始
         [self.mainBtn setTransform:angle];
     } completion:^(BOOL finished){// 动画结束
         [self.mainBtn setTransform:angle];
@@ -98,14 +101,14 @@
         if (_isSpin) {// 旋转动画
             CAKeyframeAnimation *rotateAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
             [rotateAnimation setValues:[NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0f],[NSNumber numberWithFloat:M_PI * 2], nil]];
-            [rotateAnimation setDuration:0.4f];
+            [rotateAnimation setDuration:_subAnimationTime];
             [rotateAnimation setKeyTimes:[NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0f], [NSNumber numberWithFloat:1.0f], nil]];
             [animationOptions addObject:rotateAnimation];
         }
         
         // 位置动画
         CAKeyframeAnimation *positionAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-        [positionAnimation setDuration:0.4f];
+        [positionAnimation setDuration:_subAnimationTime];
         CGMutablePathRef path = CGPathCreateMutable();
         CGPathMoveToPoint(path, NULL, x, y);
         CGPathAddLineToPoint(path, NULL, farX, farY);
@@ -117,23 +120,23 @@
         
         CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
         [animationGroup setAnimations: animationOptions];
-        [animationGroup setDuration:0.4f];
+        [animationGroup setDuration:_subAnimationTime];
         [animationGroup setFillMode: kCAFillModeForwards];
         [animationGroup setTimingFunction: [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
         
         NSDictionary *properties = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:button, [NSValue valueWithCGPoint:CGPointMake(endX, endY)], animationGroup, nil] forKeys:[NSArray arrayWithObjects:@"view", @"center", @"animation", nil]];
         
-        [self performSelector:@selector(_expand:) withObject:properties afterDelay:0.1f * ([self.buttonArray count] - i)];
+        [self performSelector:@selector(_expand:) withObject:properties afterDelay:_delay * ([self.buttonArray count] - i)];
     }
     self.isExpanding = YES;// 设为已展开
-    [self performSelector:@selector(changeMainAlpha) withObject:nil afterDelay:0.1f * [self.buttonArray count]];
+    [self performSelector:@selector(changeMainAlpha) withObject:nil afterDelay:_delay * [self.buttonArray count]];
 }
 
 // 收起动画
 - (void) hideButtonsAnimated {
     // 主按钮旋转动画
     CGAffineTransform unangle = CGAffineTransformMakeRotation (_mainReRotate);
-    [UIView animateWithDuration:0.3 animations:^{// 动画开始
+    [UIView animateWithDuration:_mainAnimationTime animations:^{// 动画开始
         [self.mainBtn setTransform:unangle];
     } completion:^(BOOL finished){// 动画结束
         [self.mainBtn setTransform:unangle];
@@ -151,7 +154,7 @@
         if (_isSpin) {// 旋转动画
             CAKeyframeAnimation *rotateAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
             [rotateAnimation setValues:[NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0f],[NSNumber numberWithFloat:M_PI * -2], nil]];
-            [rotateAnimation setDuration:0.4f];
+            [rotateAnimation setDuration:_subAnimationTime];
             [rotateAnimation setKeyTimes:[NSArray arrayWithObjects:[NSNumber numberWithFloat:0.0f], [NSNumber numberWithFloat:1.0f], nil]];
             [animationOptions addObject:rotateAnimation];
         }
@@ -159,14 +162,14 @@
         // 透明度？
         CAKeyframeAnimation *opacityAnimation = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
         [opacityAnimation setValues:[NSArray arrayWithObjects:[NSNumber numberWithFloat:1.0f], [NSNumber numberWithFloat:0.0f], nil]];
-        [opacityAnimation setDuration:0.4];
+        [opacityAnimation setDuration:_subAnimationTime];
         [animationOptions addObject:opacityAnimation];
         
         // 位置动画
         float y = [button center].y;
         float x = [button center].x;
         CAKeyframeAnimation *positionAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-        [positionAnimation setDuration:0.4f];
+        [positionAnimation setDuration:_subAnimationTime];
         CGMutablePathRef path = CGPathCreateMutable();
         CGPathMoveToPoint(path, NULL, x, y);
         CGPathAddLineToPoint(path, NULL, endX, endY);
@@ -176,15 +179,15 @@
         
         CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
         [animationGroup setAnimations: animationOptions];
-        [animationGroup setDuration:0.4f];
+        [animationGroup setDuration:_subAnimationTime];
         [animationGroup setFillMode: kCAFillModeForwards];
         [animationGroup setTimingFunction: [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
         
         NSDictionary *properties = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:button, animationGroup, nil] forKeys:[NSArray arrayWithObjects:@"view", @"animation", nil]];
-        [self performSelector:@selector(_close:) withObject:properties afterDelay:0.1f * ([self.buttonArray count] - i)];
+        [self performSelector:@selector(_close:) withObject:properties afterDelay:_delay * ([self.buttonArray count] - i)];
     }
     self.isExpanding = NO;// 设为未展开
-    [self performSelector:@selector(changeMainAlpha) withObject:nil afterDelay:0.1f * [self.buttonArray count]];
+    [self performSelector:@selector(changeMainAlpha) withObject:nil afterDelay:_delay * [self.buttonArray count]];
 }
 
 // 弹出
@@ -249,6 +252,18 @@
 
 - (void)setMainAlpha:(float)alpha {
     _mainAlpha = alpha;
+}
+
+- (void)setMainAnimationTime:(float)time {
+    _mainAnimationTime = time;
+}
+
+- (void)setSubAnimationTime:(float)time {
+    _subAnimationTime = time;
+}
+
+- (void)setDelay:(float)time {
+    _delay = time;
 }
 
 

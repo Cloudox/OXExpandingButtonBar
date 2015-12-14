@@ -20,6 +20,9 @@
     float _farY;// 子按钮弹出动画弹到的最远高度距离
     float _nearY;// 子按钮弹出动画反弹时的最近高度距离
     float _mainAlpha;// 主按钮未展开时的alpha值
+    float _mainAnimationTime;// 主按钮旋转动画时间
+    float _subAnimationTime;// 子按钮弹出和旋转动画时间
+    float _delay;// 子按钮之间的间隔时间；也影响主按钮延迟改变透明度的时间
 }
 
 /* ----------------------------------------------
@@ -85,5 +88,20 @@
  * 设置主按钮未展开时的alpha值
  **/
 - (void)setMainAlpha:(float)alpha;
+
+/**
+ * 设置主按钮旋转动画时间
+ **/
+- (void)setMainAnimationTime:(float)time;
+
+/**
+ * 设置子按钮弹出和旋转动画时间
+ **/
+- (void)setSubAnimationTime:(float)time;
+
+/**
+ * 设置子按钮之间的间隔时间；也影响主按钮延迟改变透明度的时间
+ **/
+- (void)setDelay:(float)time;
 
 @end

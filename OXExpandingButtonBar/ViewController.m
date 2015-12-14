@@ -48,6 +48,9 @@
 //    [self.bar setFarY:30.0f];// 设置子按钮弹出动画弹到的最远高度距离
 //    [self.bar setNearY:15.0f];// 设置子按钮弹出动画反弹时的最近高度距离
 //    [self.bar setMainAlpha:0.5f];// 设置主按钮未展开时的alpha值
+//    [self.bar setMainAnimationTime:0.3f];// 设置主按钮旋转动画时间
+    [self.bar setSubAnimationTime:0.4f];//设置子按钮弹出和旋转动画时间
+//    [self.bar setDelay:0.1f];// 设置子按钮之间的间隔时间；也影响主按钮延迟改变透明度的时间
     [self.view addSubview:self.bar];
 }
 
