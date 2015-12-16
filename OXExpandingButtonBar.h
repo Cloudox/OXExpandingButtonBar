@@ -44,12 +44,12 @@
 /**
  * 展开子按钮
  **/
-- (void)showButtonsAnimated;
+- (void)showButtonsAnimated:(BOOL)animated;
 
 /**
  * 收起子按钮
  **/
-- (void) hideButtonsAnimated;
+- (void) hideButtonsAnimated:(BOOL)animated;
 
 
 /* ----------------------------------------------

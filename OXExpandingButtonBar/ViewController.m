@@ -63,7 +63,7 @@
 
 // 点击按钮2的响应
 - (void)btn2Tap {
-    [self.bar hideButtonsAnimated];
+    [self.bar hideButtonsAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
