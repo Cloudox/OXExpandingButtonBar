@@ -50,13 +50,12 @@ if (bar.isExpanding) {
 ```objective-c
 - (void)setMainRotate:(float)rotate;
 ```
-设置展开时主按钮旋转到的角度。
+设置展开时主按钮旋转到的角度。默认为0度。
 
 ```objective-c
 - (void)setMainReRotate:(float)rotate;
 ```
-设置收起时主按钮旋转到的角度。
-
+设置收起时主按钮旋转到的角度。默认为45度。
 
 ```objective-c
 - (void)setAnimated:(BOOL)animated;
@@ -71,35 +70,35 @@ if (bar.isExpanding) {
 ```objective-c
 - (void)setEndY:(float)endy;
 ```
-设置子按钮最终位置之间的高度距离
+设置子按钮最终位置之间的高度距离。默认为30。
 
 ```objective-c
 - (void)setFarY:(float)fary;
 ```
-设置子按钮弹出动画弹到的最远高度距离
+设置子按钮弹出动画弹到的最远高度距离。默认为30。
 
 ```objective-c
 - (void)setNearY:(float)neary;
 ```
-设置子按钮弹出动画反弹时的最近高度距离
+设置子按钮弹出动画反弹时的最近高度距离。默认为15。
 
 ```objective-c
 - (void)setMainAlpha:(float)alpha;
 ```
-设置主按钮未展开时的alpha值  
+设置主按钮未展开时的alpha值。默认为你对主按钮设置的alpha值。  
 `注意：`在创建主按钮时，需要自行设置初始的alpha值，与此处设置的一般一致；当你不使用此方法时，则未展开时始终与你设置的主按钮alpha值一样。
 
 ```objective-c
 - (void)setMainAnimationTime:(float)time;
 ```
-设置主按钮旋转动画时间
+设置主按钮旋转动画时间。默认为0.3秒。
 
 ```objective-c
 - (void)setSubAnimationTime:(float)time;
 ```
-设置子按钮弹出和旋转动画时间
+设置子按钮弹出和旋转动画时间。默认为0.4秒
 
 ```objective-c
 - (void)setDelay:(float)time;
 ```
-设置子按钮之间的间隔时间；也影响主按钮延迟改变透明度的时间
+设置子按钮之间的间隔时间；也影响主按钮延迟改变透明度的时间。默认为0.1秒
