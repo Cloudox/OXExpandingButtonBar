@@ -50,8 +50,8 @@
      旋转方向为：顺时针旋转
      */
     
-    _mainRotate = 0.0f;
-    _mainReRotate = - M_PI*(45)/180.0;
+    _mainRotate = - M_PI*(45)/180.0f;
+    _mainReRotate = 0.0f;
     _isSpin = YES;
     _isAnimated = YES;
     _endY = 30.0f;
