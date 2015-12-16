@@ -96,9 +96,9 @@ if (bar.isExpanding) {
 ```objective-c
 - (void)setSubAnimationTime:(float)time;
 ```
-设置子按钮弹出和旋转动画时间。默认为0.4秒
+设置子按钮弹出和旋转动画时间。默认为0.4秒。
 
 ```objective-c
 - (void)setDelay:(float)time;
 ```
-设置子按钮之间的间隔时间；也影响主按钮延迟改变透明度的时间。默认为0.1秒
+设置子按钮之间的间隔时间；也影响主按钮延迟改变透明度的时间。默认为0.1秒。
