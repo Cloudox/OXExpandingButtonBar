@@ -57,10 +57,16 @@ if (bar.isExpanding) {
 ```
 设置收起时主按钮旋转到的角度。
 
+
+```objective-c
+- (void)setAnimated:(BOOL)animated;
+```
+设置子按钮弹出及收回是否动画。包括主按钮旋转动画、主按钮改变透明度的延时、子按钮旋转动画、子按钮弹出、收回的动画，若设为NO则全部取消动画。默认为YES。
+
 ```objective-c
 - (void)setSpin:(BOOL)b;
 ```
-设置弹出子按钮时是否旋转子按钮。
+设置弹出子按钮时是否旋转子按钮。只在上面是否动画设为YES时生效。默认为YES。
 
 ```objective-c
 - (void)setEndY:(float)endy;
