@@ -63,6 +63,11 @@ if (bar.isExpanding) {
 设置弹出子按钮时是否旋转子按钮。
 
 ```objective-c
+- (void)setAnimated:(BOOL)animated;
+```
+设置子按钮弹出及收回是否动画。包括主按钮旋转动画、主按钮改变透明度的延时、子按钮旋转动画、子按钮弹出、收回的动画，若设为NO则全部取消动画
+
+```objective-c
 - (void)setEndY:(float)endy;
 ```
 设置子按钮最终位置之间的高度距离
